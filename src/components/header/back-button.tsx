@@ -9,7 +9,12 @@ export function BackButton() {
   if (pathname === '/') return null
 
   return (
-    <Button onClick={() => router.back()} variant='outline' size='sm'>
+    <Button
+      onClick={() => router.back()}
+      variant='outline'
+      size='sm'
+      className='animate-fade-in'
+    >
       &larr; Back
     </Button>
   )
