@@ -17,3 +17,15 @@ This is a Next.js project with GraphQL integration
 - Tailwind CSS
 - Storybook
 - TypeScript
+
+## License
+
+- [MIT](LICENSE.md)
+
+&nbsp;
+
+---
+
+&nbsp;
+
+[**Go To Top &nbsp; ⬆️**](#nextjs-graphql)
