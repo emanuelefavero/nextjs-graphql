@@ -1,6 +1,8 @@
+import { Button } from '@/components/ui/button'
 import { client } from '@/lib/graphql-client'
 import { COUNTRIES_QUERY } from '@/lib/queries'
 import type { Countries, Country } from '@/types/countries'
+import Link from 'next/link'
 
 export async function CountriesLoader() {
   const data = await client.request<Countries>(COUNTRIES_QUERY)
@@ -11,7 +13,11 @@ export async function CountriesLoader() {
     <ul>
       {data.countries.slice(0, 10).map((country: Country) => (
         <li key={country.code}>
-          {country.emoji} {country.name} ({country.code})
+          <Button variant='link' asChild>
+            <Link href={`/country/${country.code}`}>
+              {country.emoji} {country.name} ({country.code})
+            </Link>
+          </Button>
         </li>
       ))}
     </ul>
