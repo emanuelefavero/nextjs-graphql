@@ -1,9 +1,12 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
 import { usePathname, useRouter } from 'next/navigation'
 
-export function BackButton() {
+type BackButtonProps = React.ComponentPropsWithRef<typeof Button>
+
+export function BackButton({ className, ...props }: BackButtonProps) {
   const router = useRouter()
   const pathname = usePathname()
   if (pathname === '/') return null
@@ -13,7 +16,8 @@ export function BackButton() {
       onClick={() => router.back()}
       variant='outline'
       size='sm'
-      className='animate-fade-in'
+      className={cn('animate-fade-in', className)}
+      {...props}
     >
       &larr; Back
     </Button>
