@@ -1,4 +1,4 @@
-import CountriesLoader from '@/components/Countries/CountriesLoader'
+import CountriesLoader from '@/components/countries/CountriesLoader'
 import { Suspense } from 'react'
 
 export default async function Home() {
