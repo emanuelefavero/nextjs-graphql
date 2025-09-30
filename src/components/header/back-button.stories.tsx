@@ -1,6 +1,10 @@
 import { BackButton } from '@/components/header/back-button'
 import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 
+// TODO Implement light/dark mode toggle in Storybook
+// @see https://storybook.js.org/docs/react/essentials/themes
+// @see https://storybook.js.org/blog/how-to-add-a-theme-switcher-to-storybook/
+
 // * Metadata
 const meta = {
   title: 'components/header/BackButton',
