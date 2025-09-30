@@ -4,6 +4,8 @@ import { COUNTRIES_QUERY } from '@/lib/queries'
 import type { Countries, Country } from '@/types/countries'
 import Link from 'next/link'
 
+// TODO increase the number of countries shown per page or add pagination
+
 export async function CountriesLoader() {
   const data = await client.request<Countries>(COUNTRIES_QUERY)
 
